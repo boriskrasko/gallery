@@ -1,0 +1,187 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700|Roboto:300,300i,400,400i,500,500i,700,700i);
+::selection {
+  background-color: #f8b81d;
+  color: #fff
+}
+
+.button_all {
+  font: 700 16px/28px Roboto, sans-serif;
+  width: 180px;
+  text-align: center;
+  background: #f6b60b;
+  display: block;
+  border: 0;
+  color: #222;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  padding: 0
+}
+
+.button_all:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #222;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  right: 0;
+  transform: scaleY(0);
+  transform-origin: 50%;
+  transition-property: transform;
+  transition-duration: .3s;
+  transition-timing-function: ease-out
+}
+
+.button_all:focus,
+.button_all:hover {
+  color: #fff!important
+}
+
+.button_all:focus:before,
+.button_all:hover:before {
+  transform: scaleY(1)
+}
+
+.tittle {
+  text-align: center;
+  text-transform: uppercase
+}
+
+.tittle h2 {
+  font: 400 24px Oswald, sans-serif;
+  color: #222;
+  padding-top: 90px;
+  position: relative
+}
+
+.tittle h2:after {
+  content: "";
+  position: absolute;
+  background: #f6b60b;
+  height: 5px;
+  width: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px
+}
+
+.tittle h4 {
+  font: 400 14px Roboto, sans-serif;
+  color: #555;
+  padding-top: 55px
+}
+
+.p0 {
+  padding: 0
+}
+
+body {
+  font-family: Roboto, sans-serif
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  margin: 0
+}
+
+body p {
+  font-family: Roboto, sans-serif;
+  line-height: 26px;
+  color: #555;
+  margin: 0
+}
+
+body section.row {
+  margin: 0
+}
+
+button {
+  outline: 0;
+  transition: all .3s linear 0s
+}
+
+button:after,
+button:before {
+  transition: all .3s linear 0s
+}
+
+button:focus,
+button:hover {
+  outline: 0;
+  text-decoration: none;
+  transition: all .3s linear 0s
+}
+
+h1 {
+  font-size: 82px;
+}
+
+.featured_works {
+  background: url(../images/protfolio_bg.jpg) no-repeat fixed;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 100px;
+  display: block;
+  overflow: hidden;
+  padding-bottom: 100px
+}
+
+.featured_works:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, .9);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  z-index: -1
+}
+
+.featured_works .tittle h2 {
+  color: #fff
+}
+
+.featured_works .tittle h4 {
+  color: #fefefe
+}
+
+.featured_works .featured_gallery {
+  padding-top: 60px
+}
+
+.featured_works .featured_gallery .gallery_iner {
+  position: relative;
+  overflow: hidden
+}
+
+.featured_works .featured_gallery .gallery_iner img {
+  max-width: 100%
+}
+
+.featured_works .featured_gallery .gallery_iner:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: all .3s linear 0s
+}
+
+.featured_works .featured_gallery .gallery_iner:focus:after,
+.featured_works .featured_gallery .gallery_iner:hover:after {
+  opacity: 1
+}
